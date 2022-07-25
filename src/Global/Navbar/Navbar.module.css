@@ -1,0 +1,50 @@
+.Container .Navbar {
+    width: 100%;
+    background-color: transparent;
+    top: 0%;
+    /* padding: 0.5%; */
+    z-index: 2;
+    box-shadow: none;
+}
+
+.Container .Navbar2 {
+    background-color: white;
+    width: 100%;
+    top: 0%;
+    /* padding: 0.5%; */
+    z-index: 2;
+    box-shadow: none;
+}
+
+.Container .element {
+    color: white;
+    text-transform: none;
+
+}
+
+.Container .element2 {
+    color: #337acd;
+    text-transform: none;
+
+}
+
+.Container .accordian {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 1%;
+    color: white;
+}
+
+.Container .Popover {
+    width: 15% !important;
+}
+
+.Container .Popover .option {
+    cursor: pointer;
+    margin: 2% 0;
+}
+
+.Container .Popover .option:hover {
+    color: black;
+}
