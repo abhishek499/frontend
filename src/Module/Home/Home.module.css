@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}.Container {
+  position: relative;
+}
+.childContainer {
+  padding: 0 5%;
+}
+.section1 {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  /* overflow: hidden; */
+}
+.section1 img:hover {
+  /* transform: scale(1.1); */
+}
+.section1 h1 {
+  position: absolute;
+  top: 35%;
+  font-size: 80px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: orangered;
+  font-family: "Tangerine";
+  z-index: 1;
+}
+.section2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  background: white;
+  border-radius: -3px;
+  margin-top: -50px;
+  z-index: 1;
+  box-shadow: 0px 4px 8px grey;
+  background: gray;
+  gap: 2px;
+}
+.inputContainer{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.input{
+    height: 50%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    width: 100%;
+    font-family: 'El Messiri', sans-serif;
+}
+.section2 section {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.section3 {
+  padding: 120px 0;
+  text-align: center;
+}
+.Heading {
+  font-size: 50px;
+  margin: 0;
+  width: 100%;
+  color: orangered;
+  font-family: "Tangerine";
+}
+.Description{
+    font-size: 45px;
+    margin: 0;
+    width: 100%;
+    color: Black;
+    font-family: 'El Messiri', sans-serif;
+}
+.cardSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.cardSection .item1 {
+  width: 258px;
+  height: 220px;
+  /* background: antiquewhite; */
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cardSection p{
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  font-size: 20px;
+  font-family: 'El Messiri', sans-serif;
+  z-index: 1;
+}
+.cardSection .item2 {
+  flex-grow: 1;
+  width: 258px;
+  height: 220px;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cardSection .item3 {
+  width: 580px;
+  height: 220px;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cardSection section img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+.cardSection section img:hover {
+  filter: brightness(0.5);
+}
+@keyframes filter {
+  0% {
+    margin-bottom: -50px;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+.section4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.section4 .item1 {
+  position: relative;
+  width: 600px;
+  margin: auto;
+  padding: 1%;
+  
+}
+.section4 .item1 img {
+  width: 100%;
+}
+.section4 .item2 h1 {
+    font-size: 40px;
+    color: black;
+    font-family: 'El Messiri', sans-serif;
+}
+.section4 .item2 p {
+    font-size: 20px;
+    color: gray;
+    font-family: sans-serif;
+    line-height: 40px;
+    padding: 2%;
+}
+.section4 .item2 {
+    max-width: 500px;
+    margin: auto;
+    padding: 1%;
+}
+.section4 section div {
+  position: absolute;
+  top: 26%;
+  right: 5%;
+  font-size: 4.2px;
+  color: orangered;
+  font-family: "Tangerine";
+}
+.section5 {
+    text-align: center;
+    padding: 120px 0;
+}
+.section6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://media.istockphoto.com/photos/sunset-over-the-small-american-town-in-mountains-picture-id1281556334?b=1&k=20&m=1281556334&s=170667a&w=0&h=DDHPJl2QvbgUYSl6zBUQC-NN98cklSgLxQjfvH1-nt8=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 3%;
+}
+.section6 .item1 {
+  position: relative;
+  width: 600px;
+  margin: auto;
+}
+.section6 .item2 {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section6 .item2 div {
+  border: 1px solid red;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  margin: 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+.section6 .item2 div .TripIcon {
+  font-size: 50px;
+  position: relative;
+  overflow: hidden;
+  color: red;
+  cursor: pointer;
+}
+.section6 .item2 div .TripIcon:hover {
+  transition: 0.9s;
+  transform: rotateY(180deg);
+
+}
+
+@media (max-width: 980px) {
+  .cardSection section {
+    flex-grow: 0;
+    width: 100% !important;
+  }
+  .section2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    background: white;
+    border-radius: -3px;
+    margin-top: -50px;
+    z-index: 1;
+    box-shadow: 0px 4px 8px grey;
+    background: gray;
+    gap: 2px;
+  }
+}

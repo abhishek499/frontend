@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
@@ -12,17 +12,19 @@ import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
 import functionality from "./NavbarStore/NavbarStore";
 import style from "./Navbar.module.css";
-import Popover2 from "./NavbarStore/Popover";
-
+import Popover2 from "./NavbarStore/Popover"
 
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const { Home} = functionality;
+  const [open, setOpen] = React.useState(false);
+  const { Home, ApplyNow } = functionality;
+
   return (
     <div className={style.Container}>
       <AppBar
-        position="fixed">
+        position="fixed"
+        className={style.Navbar}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -32,18 +34,18 @@ const ResponsiveAppBar = () => {
               component="a"
               href="/"
               sx={{
-                mr: 2,
+                mr: 0,
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
+                margin: "0",
               }}
+              style={{ alignItems: "center" }}
             >
-
-              {/* Logo */}
-
+             Logo
             </Typography>
             <Typography
               variant="h5"
@@ -51,7 +53,7 @@ const ResponsiveAppBar = () => {
               component="a"
               href=""
               sx={{
-                mr: 2,
+                mr: 0,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
                 fontFamily: "monospace",
@@ -59,11 +61,10 @@ const ResponsiveAppBar = () => {
                 letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
+                margin: "0",
               }}
             >
-
-              {/* Logo */}
-
+            Logo
             </Typography>
             <Box
               sx={{
@@ -73,7 +74,7 @@ const ResponsiveAppBar = () => {
               }}
             >
               {Home.map((page) => (
-               <Popover2 key={page.id} Page={page} />
+                <Popover2 Page={page}/>
               ))}
               <Button
                 className={style.element}
@@ -87,6 +88,7 @@ const ResponsiveAppBar = () => {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
+                // onClick={handleOpenNavMenu}
                 color="inherit"
               >
                 <SearchIcon
@@ -98,35 +100,51 @@ const ResponsiveAppBar = () => {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                onClick={(e) =>setAnchorElNav(e.currentTarget)}
+                onClick={() => setOpen(true)}
                 color="inherit"
               >
                 <MenuIcon
                   className={style.Icon}
                 />
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={(e) =>setAnchorElNav(null)}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {Home.map((page) => (
-                   <Popover2 key={page.id} Page={page} />
-                ))}
-              </Menu>
+              {open && (
+                <div className={style.sidebarMenu}>
+                  <div className={style.IconContainer}>
+                    <IconButton
+                      size="large"
+                      aria-label="account of current user"
+                      aria-controls="menu-appbar"
+                      aria-haspopup="true"
+                      onClick={() => setOpen(false)}
+                      color="inherit"
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                  </div>
+                  <div className={style.ElementContainer}>
+                  Logo
+                  </div>
+                  <div
+                    className={style.ElementContainer}
+                    style={{ padding: "2% 3%" }}
+                  >
+                    {Home.map(
+                      (page) => (
+                        <Typography
+                          onClick={() => {
+                            setOpen(false);
+                          }}
+                          textAlign="center"
+                          className={style.elementNav}
+                        > <b>
+                          {page.name}
+                          </b>
+                        </Typography>
+                      )
+                    )}
+                  </div>
+                </div>
+              )}
             </Box>
           </Toolbar>
         </Container>

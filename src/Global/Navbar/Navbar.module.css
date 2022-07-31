@@ -1,50 +1,77 @@
-.Container .Navbar {
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+.Container .Navbar{
     width: 100%;
-    background-color: transparent;
-    top: 0%;
-    /* padding: 0.5%; */
-    z-index: 2;
-    box-shadow: none;
-}
-
-.Container .Navbar2 {
     background-color: white;
-    width: 100%;
     top: 0%;
-    /* padding: 0.5%; */
     z-index: 2;
-    box-shadow: none;
+    /* box-shadow: none ; */
 }
-
-.Container .element {
-    color: white;
-    text-transform: none;
-
-}
-
-.Container .element2 {
+.Container .buttonTextnav{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0.5%;
+  color: black;
+}.buttonTextnav:hover{
     color: #337acd;
-    text-transform: none;
-
 }
-
-.Container .accordian {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 1%;
-    color: white;
-}
-
-.Container .Popover {
-    width: 15% !important;
-}
-
-.Container .Popover .option {
-    cursor: pointer;
-    margin: 2% 0;
-}
-
-.Container .Popover .option:hover {
+.Container .element{
     color: black;
+    text-transform: none;
+    padding: 2%;
+}
+
+.sidebarMenu{
+    height: 100vh;
+    position: fixed;
+    background: white;
+    color: black;
+    top: 0%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    /* padding: 14px 24px; */
+    width: 100%;
+    left: 0%;
+    animation: menu linear 480ms;
+    z-index: 3;
+}
+@keyframes menu {
+    0%{
+        left: 100%; 
+    }
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.IconContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.ElementContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 1% 0 1%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.elementNav{
+    padding: 1% 0;
+    cursor: pointer;
+    color: rgb(80, 76, 76);
+}
+.elementNav:hover{
+    color: black
+}
+
+.Container .Icon{
+    color: black;
+    margin: 0 20%;
 }
