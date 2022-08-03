@@ -8,7 +8,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
 import functionality from "./NavbarStore/NavbarStore";
 import style from "./Navbar.module.css";
@@ -17,7 +16,7 @@ import Popover2 from "./NavbarStore/Popover"
 
 const ResponsiveAppBar = () => {
   const [open, setOpen] = React.useState(false);
-  const { Home, ApplyNow } = functionality;
+  const { Home } = functionality;
 
   return (
     <div className={style.Container}>
@@ -28,7 +27,7 @@ const ResponsiveAppBar = () => {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-            <Typography
+            {/* <Typography
               variant="h6"
               noWrap
               component="a"
@@ -46,7 +45,7 @@ const ResponsiveAppBar = () => {
               style={{ alignItems: "center" }}
             >
              Logo
-            </Typography>
+            </Typography> */}
             <Typography
               variant="h5"
               noWrap
@@ -70,11 +69,12 @@ const ResponsiveAppBar = () => {
               sx={{
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
-                justifyContent: "flex-end",
+                justifyContent: "space-between",
+                padding:'0 2%'
               }}
             >
               {Home.map((page) => (
-                <Popover2 Page={page}/>
+                <Popover2 key={page.id} Page={page}/>
               ))}
               <Button
                 className={style.element}

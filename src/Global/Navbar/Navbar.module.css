@@ -11,8 +11,8 @@
     font-size: 15px;
     text-align: center;
     font-weight: bold;
-    margin: 0 0.5%;
-  color: black;
+    /* margin: 0 0.5%; */
+    color: black;
 }.buttonTextnav:hover{
     color: #337acd;
 }

@@ -32,7 +32,7 @@
 }
 .section2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   max-width: 100%;
   margin: auto;
   position: relative;
@@ -257,7 +257,7 @@
     flex-grow: 0;
     width: 100% !important;
   }
-  .section2 {
+  /* .section2 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     max-width: 100%;
@@ -270,5 +270,5 @@
     box-shadow: 0px 4px 8px grey;
     background: gray;
     gap: 2px;
-  }
+  } */
 }

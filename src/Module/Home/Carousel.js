@@ -42,7 +42,7 @@ export default function Carousel() {
         className="mySwiper"
       >
         {data.map((item) => (
-          <SwiperSlide>
+          <SwiperSlide key={item.id}>
             <img
               style={{
                 height: "85vh",

@@ -37,7 +37,7 @@ const functionality = {
             },]
         }, {
             id: 1,
-            name: 'Follow the foot steps of Lord RAMA',
+            name: 'Steps of Lord RAMA',
             option: [{
                 id: 0,
                 option: 'Banaras'
@@ -54,7 +54,7 @@ const functionality = {
             ]
         }, {
             id: 2,
-            name: 'Kashi Darshan (Spritual Banaras)',
+            name: 'Kashi Darshan',
             option: [{
                 id: 0,
                 option: 'Ganga Arti'
@@ -89,6 +89,69 @@ const functionality = {
         }, {
             id: 4,
             name: 'Honeymoon',
+            option: [{
+                id: 0,
+                option: 'Nanital'
+            }, {
+                id: 1,
+                option: 'Srinagar'
+            }, {
+                id: 2,
+                option: 'North'
+            }, {
+                id: 3,
+                option: 'Baanfivs'
+            }, {
+                id: 4,
+                option: 'Tent City'
+            }
+            ]
+        },
+        {
+            id: 5,
+            name: 'Cab',
+            option: [{
+                id: 0,
+                option: 'Nanital'
+            }, {
+                id: 1,
+                option: 'Srinagar'
+            }, {
+                id: 2,
+                option: 'North'
+            }, {
+                id: 3,
+                option: 'Baanfivs'
+            }, {
+                id: 4,
+                option: 'Tent City'
+            }
+            ]
+        },
+        {
+            id: 6,
+            name: 'Flight',
+            option: [{
+                id: 0,
+                option: 'Nanital'
+            }, {
+                id: 1,
+                option: 'Srinagar'
+            }, {
+                id: 2,
+                option: 'North'
+            }, {
+                id: 3,
+                option: 'Baanfivs'
+            }, {
+                id: 4,
+                option: 'Tent City'
+            }
+            ]
+        },
+        {
+            id: 7,
+            name: 'Train',
             option: [{
                 id: 0,
                 option: 'Nanital'

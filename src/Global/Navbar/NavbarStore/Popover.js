@@ -9,34 +9,43 @@ function Popover2(props) {
   const [show, setShow] = React.useState(false);
   const open = Boolean(anchorEl);
   return (
-    <>
+    <div
+    style={{
+      display:"flex",
+      justifyContent:'space-between',
+      alignItem:"center",
+    }}
+      onMouseOver={(e) => {
+        setAnchorEl(e.currentTarget);
+        setShow(true);
+      }}
+      onMouseLeave={() => {
+        setAnchorEl(null);
+        setShow(false);
+      }}
+    >
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         className={style.buttonTextnav}
-        hideBackdrop="true"
-        onMouseOver={(e) => {
-          setAnchorEl(e.currentTarget);
-          setShow(true);
-        }}
-          onMouseLeave={() => {
-            setAnchorEl(null);
-            setShow(false);
-          }}
       >
         {props.Page.name}
       </Button>
       <Menu
         anchorEl={anchorEl}
         open={show}
-        style={{ pointerEvents: "none"}}
+        style={{ pointerEvents: "none" }}
         disableEnforceFocus={false}
       >
         {props.Page.option.map((item) => (
           <MenuItem
-          style={{ pointerEvents: "auto" }}
+            onClick={() => {
+              setAnchorEl(null);
+              setShow(false);
+            }}
+            style={{ pointerEvents: "auto" }}
             key={item.id}
           >
             {item.option}
@@ -44,7 +53,7 @@ function Popover2(props) {
         ))}
       </Menu>
       {/* </div> */}
-    </>
+    </div>
   );
 }
 

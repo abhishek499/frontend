@@ -73,7 +73,7 @@ export default function Slider() {
       },
   ];
   return (
-    <div>
+    <div style={{height:'50vh'}}>
       <Swiper
         effect={"coverflow"}
         slidesPerView={5}
@@ -111,7 +111,7 @@ export default function Slider() {
         className="mySwiper"
       >
         {data.map((item)=>(
-   <SwiperSlide>
+   <SwiperSlide key={item.id}>
    <div
      style={{
        display: "flex",
@@ -119,8 +119,6 @@ export default function Slider() {
        alignItems: "center",
        flexDirection: "column",
        background:'white',
-    //    width: '300px',
-    //    height: '350px',
        textAlign:'center'
      }}
    >
