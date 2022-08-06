@@ -1,0 +1,35 @@
+.Container {
+  position: fixed;
+  top: 50%;
+  left: 3%;
+  z-index: 3;
+  background: black;
+  border-radius: 50px;
+  width:193px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ChildContainer{
+    background: red;
+    background: red;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.ChildContainer2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 75%;
+}
+.ChildContainer2 h1{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+}

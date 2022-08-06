@@ -3,11 +3,13 @@ import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import style from "../Navbar.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Popover2(props) {
   const [anchorEl, setAnchorEl] = React.useState(false);
   const [show, setShow] = React.useState(false);
   const open = Boolean(anchorEl);
+  const navigate = useNavigate();
   return (
     <div
     style={{
@@ -44,6 +46,7 @@ function Popover2(props) {
             onClick={() => {
               setAnchorEl(null);
               setShow(false);
+              navigate(item?.url)
             }}
             style={{ pointerEvents: "auto" }}
             key={item.id}

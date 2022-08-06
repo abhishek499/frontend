@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className={style.Container}>
       <div className={style.section1}>
-      <Carousel />
+        <Carousel />
         <h1>Travel and Adventure</h1>
       </div>
       {/* Section 2 under padding */}
@@ -21,7 +21,7 @@ const Home = () => {
         <div className={style.section2}>
           <section style={{ border: "none" }}>
             <div className={style.inputContainer}>
-              <p>where to</p>
+              <p>Name</p>
               <input
                 className={style.input}
                 type="text"
@@ -31,49 +31,73 @@ const Home = () => {
           </section>
           <section>
             <div className={style.inputContainer}>
-              <p>when to</p>
+              <p>Contact Number</p>
               <input
                 className={style.input}
-                type="date"
+                type="text"
                 placeholder="Enter keywords"
               />
             </div>
           </section>
           <section>
             <div className={style.inputContainer}>
-              <p>when to</p>
-              <select className={style.input}>
-                <option>Adventure</option>
-                <option>Adventure</option>
-                <option>Adventure</option>
-              </select>
+              <p>Query</p>
+              <input
+                className={style.input}
+                type="text"
+                placeholder="Enter keywords"
+              />
             </div>
           </section>
-          <section style={{background:"red", color:"white",fontFamily:'El Messiri',fontSize:"25px"}}>Find Now</section>
+          <section
+            style={{
+              background: "red",
+              color: "white",
+              fontFamily: "El Messiri",
+              fontSize: "25px",
+            }}
+          >
+            Submit
+          </section>
         </div>
         <div className={style.section3}>
-          <h1 className={style.Heading}>Destination lists</h1>
-          <p className={style.Description}>Go Exotic Places</p>
+          <h1 className={style.Heading}>Spritual Varanasi</h1>
+          <p className={style.Description}>Popular Varanasi Tour Packages</p>
           <div className={style.cardSection}>
             <section className={style.item1}>
               <p>Spain</p>
-              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGxhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGxhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
             </section>
             <section className={style.item2}>
               <p>Thailand</p>
-              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGxhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
+              <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGxhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
             </section>
             <section className={style.item1}>
               <p>Africa</p>
-              <img src="https://images.unsplash.com/photo-1552903023-dc7b4c9fa5bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+              <img
+                src="https://images.unsplash.com/photo-1552903023-dc7b4c9fa5bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
             </section>
             <section className={style.item3}>
               <p>England</p>
-              <img src="https://images.unsplash.com/photo-1559910369-3924e235c1cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBsYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+              <img
+                src="https://images.unsplash.com/photo-1559910369-3924e235c1cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBsYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
             </section>
             <section className={style.item3}>
               <p>Australia</p>
-              <img src="https://images.unsplash.com/photo-1574509322729-fdbcea67df6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBsYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+              <img
+                src="https://images.unsplash.com/photo-1574509322729-fdbcea67df6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBsYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
             </section>
           </div>
         </div>
@@ -83,7 +107,7 @@ const Home = () => {
       <div className={style.section4}>
         <section className={style.item1}>
           <img
-            src="https://tevily-nextjs.vercel.app/_next/static/media/about-one-img-1.e526a0a5.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kashi_Vishwanath_Renovated_Mandir.jpg/220px-Kashi_Vishwanath_Renovated_Mandir.jpg"
             alt=""
           />
           <div>
@@ -92,23 +116,22 @@ const Home = () => {
           </div>
         </section>
         <section className={style.item2}>
-          <h1>Plan Your Trip with Trevily</h1>
+          <h1>About Temple</h1>
           <p>
-            There are many variations of passages of available but the majority
-            have suffered alteration in some form, by injected hum randomised
-            words which don't look even slightly. Invest in your simply
-            neighborhood Support people in free text extreme need Largest global
-            industrial business community
+            Kashi Vishwanath Temple is one of the most famous temple in
+            Varanasi, also known as the Golden temple dedicated to the Lord
+            Shiva. It was constructed in the year 1780 by the Maratha monarch,
+            Maharani Ahilyabai Holkar of the Indore.
           </p>
           <Button variant="contained" size="large" color="error">
-            Book with us now
+            Start your tour now
           </Button>
         </section>
       </div>
       <div className={style.section5}>
         <h1 className={style.Heading}>Featured tours</h1>
-        <p className={style.Description}>Most Popular Tours</p>
-        <section style={{padding: '60px 0'}}>
+        <p className={style.Description}>POPULAR DOMESTIC DESTINATIONS</p>
+        <section style={{ padding: "60px 0" }}>
           <Slider />
         </section>
       </div>
@@ -125,19 +148,19 @@ const Home = () => {
         <section className={style.item2}>
           <div>
             <ParaglidingIcon className={style.TripIcon} />
-            <h1>Paragliding</h1>
+            <h3>Paragliding</h3>
           </div>
           <div>
             <TourIcon className={style.TripIcon} />
-            <h1>Tour</h1>
+            <h3>Tour</h3>
           </div>
           <div>
             <FlightTakeoffIcon className={style.TripIcon} />
-            <h1>Flight</h1>
+            <h3>Flight</h3>
           </div>
           <div>
             <HikingIcon className={style.TripIcon} />
-            <h1>Hiking</h1>
+            <h3>Hiking</h3>
           </div>
         </section>
       </div>

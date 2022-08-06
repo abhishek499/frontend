@@ -1,0 +1,47 @@
+.FlexComponent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 4%;
+}
+.FlexItem1{
+    max-width: 450px;
+    margin: auto;
+    padding: 25px;
+}
+.FlexItem1 img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.FlexItem2{
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+}
+.Heading{
+    font-size: 20px;
+    margin: 2% 0;
+    text-align: right;
+    width: 100%;
+    color: orangered;
+    font-family: 'El Messiri', sans-serif;
+}
+.Paragraph{
+    font-size: 18px;
+    margin: 2% 0;
+    text-align: right;
+    width: 100%;
+    color: gray;
+    font-family: 'El Messiri', sans-serif;
+}
+.Bio{
+    font-size: 18px;
+    margin: 2% 0;
+    width: 100%;
+    color: Black;
+    font-family: 'El Messiri', sans-serif;
+}

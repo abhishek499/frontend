@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-}.Container {
+* {
+  margin: 0;
+  padding: 0;
+}
+.Container {
   position: relative;
 }
 .childContainer {
@@ -32,7 +33,7 @@
 }
 .section2 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   max-width: 100%;
   margin: auto;
   position: relative;
@@ -44,22 +45,27 @@
   background: gray;
   gap: 2px;
 }
-.inputContainer{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+.inputContainer {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.input{
-    height: 50%;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 20px;
-    width: 100%;
-    font-family: 'El Messiri', sans-serif;
+.inputContainer p {
+  margin: 0;
+  font-family: serif;
+  color: gray;
+}
+.input {
+  height: 50%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  width: 100%;
+  font-family: "El Messiri", sans-serif;
 }
 .section2 section {
   height: 100px;
@@ -81,12 +87,12 @@
   color: orangered;
   font-family: "Tangerine";
 }
-.Description{
-    font-size: 45px;
-    margin: 0;
-    width: 100%;
-    color: Black;
-    font-family: 'El Messiri', sans-serif;
+.Description {
+  font-size: 45px;
+  margin: 0;
+  width: 100%;
+  color: Black;
+  font-family: "El Messiri", sans-serif;
 }
 .cardSection {
   display: flex;
@@ -105,13 +111,13 @@
   align-items: center;
   position: relative;
 }
-.cardSection p{
+.cardSection p {
   position: absolute;
   bottom: 10%;
   left: 10%;
   color: white;
   font-size: 20px;
-  font-family: 'El Messiri', sans-serif;
+  font-family: "El Messiri", sans-serif;
   z-index: 1;
 }
 .cardSection .item2 {
@@ -165,27 +171,26 @@
   width: 600px;
   margin: auto;
   padding: 1%;
-  
 }
 .section4 .item1 img {
   width: 100%;
 }
 .section4 .item2 h1 {
-    font-size: 40px;
-    color: black;
-    font-family: 'El Messiri', sans-serif;
+  font-size: 40px;
+  color: black;
+  font-family: "El Messiri", sans-serif;
 }
 .section4 .item2 p {
-    font-size: 20px;
-    color: gray;
-    font-family: sans-serif;
-    line-height: 40px;
-    padding: 2%;
+  font-size: 20px;
+  color: gray;
+  font-family: sans-serif;
+  line-height: 40px;
+  padding: 2%;
 }
 .section4 .item2 {
-    max-width: 500px;
-    margin: auto;
-    padding: 1%;
+  max-width: 500px;
+  margin: auto;
+  padding: 1%;
 }
 .section4 section div {
   position: absolute;
@@ -196,8 +201,8 @@
   font-family: "Tangerine";
 }
 .section5 {
-    text-align: center;
-    padding: 120px 0;
+  text-align: center;
+  padding: 120px 0;
 }
 .section6 {
   display: flex;
@@ -207,7 +212,7 @@
   margin: auto;
   flex-wrap: wrap;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://media.istockphoto.com/photos/sunset-over-the-small-american-town-in-mountains-picture-id1281556334?b=1&k=20&m=1281556334&s=170667a&w=0&h=DDHPJl2QvbgUYSl6zBUQC-NN98cklSgLxQjfvH1-nt8=");
+    url("https://www.balajitravels.org/wp-content/uploads/2020/10/Home_Slider-1240x600-3-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -249,7 +254,6 @@
 .section6 .item2 div .TripIcon:hover {
   transition: 0.9s;
   transform: rotateY(180deg);
-
 }
 
 @media (max-width: 980px) {

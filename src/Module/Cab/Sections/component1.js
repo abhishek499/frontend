@@ -5,27 +5,27 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 
-export default function Carousel() {
+export default function Component1() {
   const data = [
     {
       id: 0,
-      img: "https://tevily-nextjs.vercel.app/_next/static/media/popular-tours__img-3.58c2f734.jpg",
+      img: "https://www.hondacarindia.com/areas/city2020/content/desktop/images/bg6.jpg",
     },
     {
       id: 1,
-      img: "https://tevily-nextjs.vercel.app/_next/static/media/popular-tours__img-1.e72f98f2.jpg",
+      img: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
       id: 2,
-      img: "https://tevily-nextjs.vercel.app/_next/static/media/popular-tours__img-2.be6c507f.jpg",
+      img: "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
       id: 3,
-      img: "https://tevily-nextjs.vercel.app/_next/static/media/popular-tours__img-4.506b0db7.jpg",
+      img: "https://images.pexels.com/photos/119435/pexels-photo-119435.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
       id: 4,
-      img: "https://tevily-nextjs.vercel.app/_next/static/media/popular-tours__img-1.e72f98f2.jpg",
+      img: "https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
   return (
@@ -49,7 +49,6 @@ export default function Carousel() {
                 width: "100%",
                 objectPosition: "center",
                 objectFit: "cover",
-                filter: "brightness(0.5)",
                 zIndex:0,
               }}
               src={item.img}

@@ -112,19 +112,24 @@ const functionality = {
             name: 'Cab',
             option: [{
                 id: 0,
-                option: 'Nanital'
+                 option: 'Hire Honda City in Varanasi',
+                url:"Cab"
             }, {
                 id: 1,
-                option: 'Srinagar'
+                 option: 'Hire Honda City in Varanasi',
+                url:"Cab"
             }, {
                 id: 2,
-                option: 'North'
+                 option: 'Hire Honda City in Varanasi',
+                url:"Cab"
             }, {
                 id: 3,
-                option: 'Baanfivs'
+                 option: 'Hire Honda City in Varanasi',
+                url:"Cab"
             }, {
                 id: 4,
-                option: 'Tent City'
+                 option: 'Hire Honda City in Varanasi',
+                url:"Cab"
             }
             ]
         },
@@ -152,6 +157,27 @@ const functionality = {
         {
             id: 7,
             name: 'Train',
+            option: [{
+                id: 0,
+                option: 'Nanital'
+            }, {
+                id: 1,
+                option: 'Srinagar'
+            }, {
+                id: 2,
+                option: 'North'
+            }, {
+                id: 3,
+                option: 'Baanfivs'
+            }, {
+                id: 4,
+                option: 'Tent City'
+            }
+            ]
+        },
+        {
+            id: 8,
+            name: 'Rudraksh',
             option: [{
                 id: 0,
                 option: 'Nanital'
