@@ -21,10 +21,9 @@ const ResponsiveAppBar = () => {
     <>
       {/* <img src="http://tirupatitravels.org/images/logo.png" alt="logo" /> */}
       <div className={style.Container}>
-        <AppBar position="fixed" className={style.Navbar}>
+        <AppBar className={style.Navbar}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-
               <Typography
                 variant="h5"
                 noWrap

@@ -14,7 +14,7 @@ const Home = () => {
     <div className={style.Container}>
       <div className={style.section1}>
         <Carousel />
-        <h1>Travel and Adventure- kartikkkkkkk</h1>
+        <h1>Travel and Adventure</h1>
       </div>
       {/* Section 2 under padding */}
       <section className={style.childContainer}>
