@@ -7,6 +7,10 @@ module.exports = {
         tangerine: ["Tangerine"],
         belleza: ["Belleza"],
         montserrat: ["Montserrat"],
+        dm: ["DM Sans"],
+      },
+      colors: {
+        col1: "#fd7e14",
       },
     },
   },

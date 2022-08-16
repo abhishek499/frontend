@@ -6,6 +6,7 @@ import LayOut from "./Global/Outlet/LayOut";
 import Cab from "./Module/Cab/Cab";
 import Contactus from "./Global/Contactus/Contactus";
 import PindDan from "./Module/PindDan/PindDan";
+import Navbar2 from "./Global/Navbar/Navbar2";
 
 const data = {
   title: "Varanasi 2N /3D Pind Daan Special",
@@ -54,16 +55,17 @@ function App() {
     <div className="App">
       {/* <Logo /> */}
       {/* <Contactus /> */}
-      <ResponsiveAppBar />
+      {/* <ResponsiveAppBar /> */}
 
       <Routes>
         <Route path="/" element={<LayOut />}>
           <Route index element={<Home />} />
           <Route path="Cab" element={<Cab />} />
           <Route path="pinddan" element={<PindDan data={data} />} />
+          <Route path="nav" element={<Navbar2 />} />
         </Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

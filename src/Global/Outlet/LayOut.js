@@ -5,7 +5,7 @@ import ResponsiveAppBar from '../Navbar/Navbar';
 const LayOut = () => {
   return (
     <div>
-    <ResponsiveAppBar />
+    {/* <ResponsiveAppBar /> */}
         <Outlet/>
     </div>
   )
