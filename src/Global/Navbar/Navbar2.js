@@ -4,6 +4,7 @@ import { createPopper } from "@popperjs/core";
 import NavLinks from "./NavLinks";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
+import Sidebar from "./Sidebar";
 
 const menu = [
   { id: 0, title: "Home", link: "/home", dropdown: false, subMenu: null },
@@ -81,23 +82,18 @@ const menu = [
 
 const Navbar2 = () => {
   const [mobileNav, setMobileNav] = useState(false);
+  const [anchorEl, setAnchorEl] = React.useState(false);
 
   const [dropdown, setDropdown] = useState(false);
 
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
+  const onMouseEnter = (e) => {
+    setAnchorEl(e.currentTarget);
+    setDropdown(true);
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
+    setAnchorEl(null);
+    setDropdown(false);
   };
 
   const dropdownRenderer = (item) => {
@@ -107,14 +103,16 @@ const Navbar2 = () => {
       return (
         <ul
           id="tooltip"
-          className="absolute px-4 py-3 space-y-3   group-hover:flex group-hover:flex-col bg-black"
+          className="absolute top-10 px-4 py-3 space-y-3 hidden group-hover:flex group-hover:flex-col bg-black"
         >
           {item.subMenu.map((itemA) => {
-            {/* console.log(itemA); */}
+            {
+              /* console.log(itemA); */
+            }
             return (
-              <li>
+              <li className="group">
                 {itemA.title}
-                {dropdownRenderer(itemA.dropdown)}
+                {dropdownRenderer(itemA)}
               </li>
             );
           })}
@@ -124,7 +122,7 @@ const Navbar2 = () => {
   };
 
   return (
-    <div className="bg-gray-600">
+    <div className="bg-gray-600 sticky" data-aos="fade-down">
       <div className="mx-[5%] md:mx-[20%]  flex justify-between items-center">
         <img
           src="https://tevily-nextjs.vercel.app/_next/static/media/logo-1.279e19a3.png"
@@ -138,12 +136,11 @@ const Navbar2 = () => {
               <li
                 id="popcorn"
                 className="relative group flex flex-col justify-between cursor-pointer"
-                onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
               >
-                <div >
+                <div>
                   <div className="flex items-center">{item.title}</div>
                   <div className="h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
-                  {dropdown && item.dropdown && dropdownRenderer(item)}
+                  {item.dropdown && dropdownRenderer(item)}
                 </div>
               </li>
             );
@@ -166,19 +163,7 @@ const Navbar2 = () => {
           )}
         </div>
       </div>
-      {mobileNav ? (
-        <div className="w-full h-[95vh] bg-gray-600">
-          <div className="h-[90%] w-full flex flex-col items-center mt-5 px-5 space-y-3">
-            {menu.map((item) => (
-              <div className="w-full">
-                <p className="text-white ">{item.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
+      <Sidebar menu={menu} mobileNav={mobileNav} />
     </div>
   );
 };
