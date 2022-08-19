@@ -9,6 +9,7 @@ import PindDan from "./Module/PindDan/PindDan";
 import Navbar2 from "./Global/Navbar/Navbar2";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Tour from "./Module/Tour/Tour";
 
 const data = {
   title: "Varanasi 2N /3D Pind Daan Special",
@@ -86,6 +87,8 @@ function App() {
           <Route path="Cab" element={<Cab />} />
           <Route path="pinddan" element={<PindDan data={data} />} />
           <Route path="nav" element={<Navbar2 />} />
+          <Route path="tour" element={<Tour data={data} />} />
+
         </Route>
       </Routes>
       {/* <Footer /> */}

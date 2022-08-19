@@ -7,7 +7,7 @@ const LayOut = () => {
   return (
     <div>
     {/* <ResponsiveAppBar /> */}
-    {/* <Navbar2 /> */}
+    <Navbar2 />
         <Outlet/>
     </div>
   )
