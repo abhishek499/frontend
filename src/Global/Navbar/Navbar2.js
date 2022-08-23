@@ -7,56 +7,72 @@ import { MdOutlineClose } from "react-icons/md";
 import Sidebar from "./Sidebar";
 
 const menu = [
-  {
-    id: 0,
-    title: "Experience Hinduism",
-    link: "/experiencehinduism",
-    dropdown: true,
-    subMenu: [
-      {
-        id: 1,
-        title: "Banaras",
-        link: "/banaras",
-        dropdown: false,
-        subMenu: null,
-      },
-      {
-        id: 2,
-        title: "Prayagraj",
-        link: "/banaras",
-        dropdown: false,
-        subMenu: null,
-      },
-      {
-        id: 3,
-        title: "Ayodhya",
-        link: "/banaras",
-        dropdown: false,
-        subMenu: null,
-      },
-      {
-        id: 4,
-        title: "Chitrakoot",
-        link: "/banaras",
-        dropdown: false,
-        subMenu: null,
-      },
-      {
-        id: 5,
-        title: "Namish",
-        link: "/banaras",
-        dropdown: false,
-        subMenu: null,
-      },
-      {
-        id: 6,
-        title: "Boadhgaya",
-        link: "/banaras",
-        dropdown: false,
-        subMenu: null,
-      },
-    ],
-  },
+  // {
+  //   id: 0,
+  //   title: "Experience Hinduism",
+  //   link: "/experiencehinduism",
+  //   dropdown: true,
+  //   subMenu: [
+  //     {
+  //       id: 1,
+  //       title: "Banaras",
+  //       link: "/banaras",
+  //       dropdown: true,
+  //       subMenu: [
+  //         {
+  //           id: 1,
+  //           title: "Banaras1",
+  //           link: "/banaras",
+  //           dropdown: true,
+  //           subMenu: [
+  //             {
+  //               id: 1,
+  //               title: "Banaras2",
+  //               link: "/banaras",
+  //               dropdown: false,
+  //               subMenu: null,
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Prayagraj",
+  //       link: "/banaras",
+  //       dropdown: false,
+  //       subMenu: null,
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "Ayodhya",
+  //       link: "/banaras",
+  //       dropdown: false,
+  //       subMenu: null,
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "Chitrakoot",
+  //       link: "/banaras",
+  //       dropdown: false,
+  //       subMenu: null,
+  //     },
+  //     {
+  //       id: 5,
+  //       title: "Namish",
+  //       link: "/banaras",
+  //       dropdown: false,
+  //       subMenu: null,
+  //     },
+  //     {
+  //       id: 6,
+  //       title: "Boadhgaya",
+  //       link: "/banaras",
+  //       dropdown: false,
+  //       subMenu: null,
+  //     },
+  //   ],
+  // },
   {
     id: 1,
     title: "Steps of Lord RAMA",
@@ -103,33 +119,133 @@ const menu = [
         id: 21,
         title: "Ganga Arti",
         link: "/banaras",
-        dropdown: false,
-        subMenu: null,
+        dropdown: true,
+        subMenu: [
+          {
+            id: 5,
+            title: "Mangla Arti",
+            link: "/home",
+            dropdown: false,
+            subMenu: null,
+          },
+          {
+            id: 5,
+            title: "Charo Arti",
+            link: "/home",
+            dropdown: false,
+            subMenu: null,
+          },
+          {
+            id: 5,
+            title: "Charo Arti/Rudra Abhishek",
+            link: "/home",
+            dropdown: false,
+            subMenu: null,
+          },
+        ],
       },
       {
         id: 22,
-        title: "Subah-E-Banaras",
+        title: "Kashi Vishwanath",
         link: "/banaras",
         dropdown: false,
         subMenu: null,
       },
       {
         id: 23,
-        title: "Temple Tour",
+        title: "Boating",
         link: "/banaras",
-        dropdown: false,
-        subMenu: null,
+        dropdown: true,
+        subMenu: [
+          {
+            id: 5,
+            title: "Boat",
+            link: "/home",
+            dropdown: false,
+            subMenu: null,
+          },
+          {
+            id: 5,
+            title: "Bajra",
+            link: "/home",
+            dropdown: false,
+            subMenu: null,
+          },
+          {
+            id: 5,
+            title: "Cruise",
+            link: "/home",
+            dropdown: false,
+            subMenu: null,
+          },
+        ],
       },
       {
         id: 24,
-        title: "Baanfivs",
+        title: "Subah-E-Banaras",
         link: "/banaras",
         dropdown: false,
         subMenu: null,
       },
       {
         id: 25,
-        title: "Tent City",
+        title: "Holiday in Ganga Arti",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Heritage Street walk",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Temple Tour",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Sarnath",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Ramnagar Fort",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Kashi Hindu University",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Bharat Mata Mandir",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Banarasi Sarree",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Rudraksh",
         link: "/banaras",
         dropdown: false,
         subMenu: null,
@@ -180,35 +296,71 @@ const menu = [
       },
       {
         id: 42,
-        title: "Srinagar",
+        title: "Musoorie",
         link: "/banaras",
         dropdown: false,
         subMenu: null,
       },
       {
         id: 43,
-        title: "North",
+        title: "Manali",
         link: "/banaras",
         dropdown: false,
         subMenu: null,
       },
       {
         id: 44,
-        title: "Banfivs",
+        title: "Srinagar",
         link: "/banaras",
         dropdown: false,
         subMenu: null,
       },
       {
         id: 45,
-        title: "Tent City",
+        title: "Darjelling",
         link: "/banaras",
         dropdown: false,
         subMenu: null,
       },
+      {
+        id: 46,
+        title: "Cochin",
+        link: "/home",
+        dropdown: false,
+        subMenu: null,
+      },
+      { id: 47, title: "Munab", link: "/home", dropdown: false, subMenu: null },
+      {
+        id: 48,
+        title: "Allepy",
+        link: "/home",
+        dropdown: false,
+        subMenu: null,
+      },
+      { id: 5, title: "Goa", link: "/home", dropdown: false, subMenu: null },
+      { id: 5, title: "Agra", link: "/home", dropdown: false, subMenu: null },
+      { id: 5, title: "Jaipur", link: "/home", dropdown: false, subMenu: null },
     ],
   },
-  { id: 5, title: "Cab", link: "/home", dropdown: false, subMenu: null },
+  {
+    id: 5,
+    title: "Cab",
+    link: "/home",
+    dropdown: true,
+    subMenu: [
+      { id: 5, title: "Sedan", link: "/home", dropdown: false, subMenu: null },
+      {
+        id: 5,
+        title: "7 Seater",
+        link: "/home",
+        dropdown: false,
+        subMenu: null,
+      },
+      { id: 5, title: "Tempo", link: "/home", dropdown: false, subMenu: null },
+      { id: 5, title: "Bus", link: "/home", dropdown: false, subMenu: null },
+      { id: 5, title: "Luxury", link: "/home", dropdown: false, subMenu: null },
+    ],
+  },
   {
     id: 6,
     title: "Flight",
@@ -338,6 +490,142 @@ const menu = [
       },
     ],
   },
+  {
+    id: 9,
+    title: "Adventure & Life",
+    link: "/banaras",
+    dropdown: true,
+    subMenu: [
+      {
+        id: 25,
+        title: "Bhangarh",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Panna",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Kanha",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Jim Corbett",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Andman & Nicobar",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Ladakh",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+    ],
+  },
+  {
+    id: 25,
+    title: "Hotel",
+    link: "/banaras",
+    dropdown: true,
+    subMenu: [
+      {
+        id: 25,
+        title: "Pooja Residency",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Landmark",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Hotel India",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Hotel Meradinn",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Hotel Diamond",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Hotel Marine",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Amaya Clark",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Ramada",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Radisson",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Taj",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      {
+        id: 25,
+        title: "Guleria kothi",
+        link: "/banaras",
+        dropdown: false,
+        subMenu: null,
+      },
+      
+    ],
+  },
 ];
 
 const Navbar2 = () => {
@@ -356,50 +644,64 @@ const Navbar2 = () => {
     setDropdown(false);
   };
 
-  const subDropdownRenderer = (item) => {
-    if (!item.dropdown) {
-      return;
-    } else {
-      <ul className="absolute w-[200px] px-4 py-3 space-y-3 shadow-lg group-hover:!flex group-hover:flex-col bg-black">
-        {item.subMenu.map((itemA) => {
-          {
-            console.log(itemA);
-          }
-          return (
-            <li className="group hover:bg-slate-500">
-              <p className="m-0">{itemA.title}</p>
-              {subDropdownRenderer(itemA)}
-            </li>
-          );
-        })}
-      </ul>;
-    }
-  };
+  // const subDropdownRenderer = (item) => {
+  //   if (!item.dropdown) {
+  //     return;
+  //   } else {
+  //     <ul className="absolute w-[200px] px-4 py-3 space-y-3 shadow-lg group-hover:!flex group-hover:flex-col bg-black">
+  //       {item.subMenu.map((itemA) => {
+  //         {
+  //           console.log(itemA);
+  //         }
+  //         return (
+  //           <li className=" hover:bg-slate-500">
+  //             <p className="m-0">{itemA.title}</p>
+  //             {subDropdownRenderer(itemA)}
+  //           </li>
+  //         );
+  //       })}
+  //     </ul>;
+  //   }
+  // };
 
-  const dropdownRenderer = (item) => {
-    if (!item.dropdown) {
-      return;
-    } else {
-      return (
-        <ul
-          id="tooltip"
-          className="absolute top-[3.8rem] w-[200px] px-4 py-3 space-y-3 opacity-0 shadow-lg group-hover:!opacity-100 group-hover:flex group-hover:flex-col bg-black"
-        >
-          {item.subMenu.map((itemA) => {
-            {
-              /* console.log(itemA); */
-            }
-            return (
-              <li className="group flex  items-center hover:bg-slate-500">
-                <p className="m-0">{itemA.title}</p>
-                {subDropdownRenderer(itemA)}
-              </li>
-            );
-          })}
-        </ul>
-      );
-    }
-  };
+  // const dropdownRenderer = (item) => {
+  //   if (!item.dropdown) {
+  //     return;
+  //   } else {
+  //     return (
+  //       <ul
+  //         id="tooltip"
+  //         className="absolute top-[3.8rem] w-[200px] px-4 py-3 space-y-3 opacity-0 shadow-lg group-hover:!opacity-100 group-hover:flex group-hover:flex-col bg-black"
+  //       >
+  //         {item.subMenu.map((itemA) => {
+  //           return (
+  //             <li className="group flex  items-center hover:bg-slate-500">
+  //               <p className="m-0 group">{itemA.title}</p>
+  //               {itemA.dropdown && (
+  //                 <ul
+  //                   id="tooltip"
+  //                   className="dropdown-content absolute left-[100%] w-[200px] px-4 py-3 space-y-3 opacity-0 shadow-lg hidden group-hover:flex group-hover:flex-col bg-black"
+  //                 >
+  //                   {itemA.subMenu.map((itemB) => {
+  //                     {
+  //                       /* console.log(itemA); */
+  //                     }
+  //                     return (
+  //                       <li className="group flex  items-center hover:bg-slate-500">
+  //                         <p className="m-0">{itemB.title}</p>
+  //                         {/* {subDropdownRenderer(itemA)} */}
+  //                       </li>
+  //                     );
+  //                   })}
+  //                 </ul>
+  //               )}
+  //             </li>
+  //           );
+  //         })}
+  //       </ul>
+  //     );
+  //   }
+  // };
 
   return (
     <div
@@ -413,24 +715,48 @@ const Navbar2 = () => {
           className="md:mr-[5%] my-[7%] md:my-[2.5%]"
         />
         {/* Desktop Navbar */}
-        <ul className="m-0 hidden lg:flex justify-between w-full text-white font-dm font-bold">
-          {menu.map((item, id) => {
-            return (
-              <li
-                id="popcorn"
-                className="relative group flex flex-col justify-between cursor-pointer px-1"
-              >
-                <div>
-                  <div className="flex items-center text-sm xl:text-lg">
-                    {item.title}
-                  </div>
+
+        <div className="hidden lg:flex ">
+          {menu.map((item) => (
+            <div className="">
+              <div className="dropdown relative">
+                <div className="dropdown relative text-base px-4 text-dm font-bold text-white cursor-pointer">
+                  {item.title}
+
                   <div className="h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
-                  {item.dropdown && dropdownRenderer(item)}
+                  {item.dropdown && (
+                    <div className="dropdown-content absolute hidden bg-black py-1">
+                      {item.subMenu.map((item1) => (
+                        <div className="text-white inline-block dropdown px-4 py-2 hover:bg-slate-300">
+                          {item1.title}
+                          {item1.dropdown && (
+                            <div className="bg-black dropdown-content hidden absolute left-[100%] top-0 py-1">
+                              {item1.subMenu.map((item2) => (
+                                <div className="text-white dropdown px-4 py-2 hover:bg-slate-300">
+                                  {item2.title}
+                                  {item2.dropdown && (
+                                    <div className="bg-black dropdown-content hidden absolute left-[100%] top-0 py-1">
+                                      {item2.subMenu.map((item3) => (
+                                        <div className="text-white px-4 py-2 hover:bg-slate-300">
+                                          {item3.title}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </li>
-            );
-          })}
-        </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Mobile Navbar */}
         <div className="flex lg:hidden">
           {mobileNav ? (

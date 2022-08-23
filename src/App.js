@@ -10,6 +10,7 @@ import Navbar2 from "./Global/Navbar/Navbar2";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Tour from "./Module/Tour/Tour";
+import Experiment from "./Module/Experiment";
 
 const data = {
   title: "Varanasi 2N /3D Pind Daan Special",
@@ -82,6 +83,8 @@ function App() {
       {/* <Contactus /> */}
 
       <Routes>
+      <Route path="experiment" element={<Experiment />} />
+
         <Route path="/" element={<LayOut />}>
           <Route index element={<Home />} />
           <Route path="Cab" element={<Cab />} />

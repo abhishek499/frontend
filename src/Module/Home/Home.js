@@ -7,14 +7,14 @@ import HikingIcon from "@mui/icons-material/Hiking";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Button from "@mui/material/Button";
 import Slider from "./Swiper";
-import Carousel from "./Carousel";
+import MyCarousel from "./Carousel";
 
 const Home = () => {
   return (
     <div className={style.Container}>
       <div className={style.section1}>
-        <Carousel />
-        <h1>Travel and Adventure</h1>
+        <MyCarousel />
+        <h1 className="reef">Travel and Adventure</h1>
       </div>
       {/* Section 2 under padding */}
       <section className={style.childContainer}>
