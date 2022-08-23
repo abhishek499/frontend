@@ -623,7 +623,6 @@ const menu = [
         dropdown: false,
         subMenu: null,
       },
-      
     ],
   },
 ];
@@ -712,46 +711,43 @@ const Navbar2 = () => {
         <img
           src="https://tevily-nextjs.vercel.app/_next/static/media/logo-1.279e19a3.png"
           alt=""
-          className="md:mr-[5%] my-[7%] md:my-[2.5%]"
+          className="md:mr-[5%] "
         />
         {/* Desktop Navbar */}
 
         <div className="hidden lg:flex ">
           {menu.map((item) => (
-            <div className="">
-              <div className="dropdown relative">
-                <div className="dropdown relative text-base px-4 text-dm font-bold text-white cursor-pointer">
-                  {item.title}
-
-                  <div className="h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
-                  {item.dropdown && (
-                    <div className="dropdown-content absolute hidden bg-black py-1">
-                      {item.subMenu.map((item1) => (
-                        <div className="text-white inline-block dropdown px-4 py-2 hover:bg-slate-300">
-                          {item1.title}
-                          {item1.dropdown && (
-                            <div className="bg-black dropdown-content hidden absolute left-[100%] top-0 py-1">
-                              {item1.subMenu.map((item2) => (
-                                <div className="text-white dropdown px-4 py-2 hover:bg-slate-300">
-                                  {item2.title}
-                                  {item2.dropdown && (
-                                    <div className="bg-black dropdown-content hidden absolute left-[100%] top-0 py-1">
-                                      {item2.subMenu.map((item3) => (
-                                        <div className="text-white px-4 py-2 hover:bg-slate-300">
-                                          {item3.title}
-                                        </div>
-                                      ))}
-                                    </div>
-                                  )}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+            <div className=" relative h-[10vh]  group max-w-[15rem]">
+              <div className="dropdown h-full py-5 inline-block relative text-base px-4 text-dm font-bold text-white cursor-pointer">
+                <p className="flex items-center">{item.title}</p>
+                <div className="h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
+                {item.dropdown && (
+                  <div className="dropdown-content absolute w-[15rem] top-[100%] hidden bg-black py-1">
+                    {item.subMenu.map((item1) => (
+                      <div className="text-white dropdown transition ease-in-out duration-1000 px-4 py-2 hover:bg-slate-300">
+                        {item1.title}
+                        {item1.dropdown && (
+                          <div className="bg-black w-[15rem] dropdown-content hidden absolute left-[100%] top-0 py-1">
+                            {item1.subMenu.map((item2) => (
+                              <div className="text-white dropdown px-4 py-2 hover:bg-slate-300">
+                                {item2.title}
+                                {item2.dropdown && (
+                                  <div className="bg-black dropdown-content hidden absolute left-[100%] top-0 py-1">
+                                    {item2.subMenu.map((item3) => (
+                                      <div className="text-white px-4 py-2 hover:bg-slate-300">
+                                        {item3.title}
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}
