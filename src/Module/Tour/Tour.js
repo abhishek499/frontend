@@ -14,7 +14,9 @@ const Tour = ({ data }) => {
   return (
     <div>
       <TopBanner data={data} />
-      <div className="h-[8vh] bg-[#FCFCFC] py-5"></div>
+      <div className="h-[8vh] bg-[#FCFCFC] py-5">
+        <div className="w-2/3 h-full bg-red-600"></div>
+      </div>
       <div>
         <div className="flex flex-col md:space-x-10 md:flex-row px-[5vw] md:px-[15vw]">
           <div className="md:w-2/3">
@@ -97,7 +99,7 @@ const Tour = ({ data }) => {
           </div>
           <div className="md:w-1/3">
             {/* Container 1 */}
-            <div className="grid grid-rows-5 bg-[#e1e1e1] md:relative top-[-16vh]">
+            <div className="grid grid-rows-5 py-[5%] bg-[#e1e1e1] md:relative top-[-16vh]">
               <div className="flex items-center ml-10 h-[8vh]">
                 <p className="text-[20px]  font-belleza font-bold">
                   Why book with us?

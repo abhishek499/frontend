@@ -711,18 +711,18 @@ const Navbar2 = () => {
         <img
           src="https://tevily-nextjs.vercel.app/_next/static/media/logo-1.279e19a3.png"
           alt=""
-          className="md:mr-[5%] "
+          className="md:mr-[5%] my-3 lg:my-0"
         />
         {/* Desktop Navbar */}
 
         <div className="hidden lg:flex ">
           {menu.map((item) => (
             <div className=" relative h-[10vh]  group max-w-[15rem]">
-              <div className="dropdown h-full py-5 inline-block relative text-base px-4 text-dm font-bold text-white cursor-pointer">
-                <p className="flex items-center">{item.title}</p>
-                <div className="h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
+              <div className="dropdown flex flex-col justify-center h-full relative mx-3  text-sm text-dm font-bold text-white cursor-pointer">
+                <p className="">{item.title}</p>
+                <div className="absolute top-[95%] h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
                 {item.dropdown && (
-                  <div className="dropdown-content absolute w-[15rem] top-[100%] hidden bg-black py-1">
+                  <div className="dropdown-content absolute w-[14rem] transition ease-in-out duration-1000 top-[100%] hidden bg-black py-1">
                     {item.subMenu.map((item1) => (
                       <div className="text-white dropdown transition ease-in-out duration-1000 px-4 py-2 hover:bg-slate-300">
                         {item1.title}
