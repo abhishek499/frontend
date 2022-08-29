@@ -5,6 +5,7 @@ import NavLinks from "./NavLinks";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
 import Sidebar from "./Sidebar";
+import { useNavigate } from "react-router-dom";
 
 const menu = [
   // {
@@ -261,7 +262,7 @@ const menu = [
       {
         id: 31,
         title: "Banaras",
-        link: "/banaras",
+        link: "/pinddan",
         dropdown: false,
         subMenu: null,
       },
@@ -633,6 +634,8 @@ const Navbar2 = () => {
 
   const [dropdown, setDropdown] = useState(false);
 
+  const navigate = useNavigate();
+
   const onMouseEnter = (e) => {
     setAnchorEl(e.currentTarget);
     setDropdown(false);
@@ -703,74 +706,85 @@ const Navbar2 = () => {
   // };
 
   return (
-    <div
-      className="bg-gray-600 fixed w-full flex flex-col lg:flex-row z-10"
-      data-aos="fade-down"
-    >
-      <div className="mx-[5%] md:mx-[7%] lg:mx-[10%] xl:mx-[15%] 2xl:[20%] lg:w-full flex justify-between items-center">
+    <div className="fixed w-full z-10">
+      <div className="bg-white flex justify-center">
         <img
           src="https://tevily-nextjs.vercel.app/_next/static/media/logo-1.279e19a3.png"
           alt=""
           className="md:mr-[5%] my-3 lg:my-0"
         />
-        {/* Desktop Navbar */}
-
-        <div className="hidden lg:flex ">
-          {menu.map((item) => (
-            <div className=" relative h-[10vh]  group max-w-[15rem]">
-              <div className="dropdown flex flex-col justify-center h-full relative mx-3  text-sm text-dm font-bold text-white cursor-pointer">
-                <p className="">{item.title}</p>
-                <div className="absolute top-[95%] h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
-                {item.dropdown && (
-                  <div className="dropdown-content absolute w-[14rem] transition ease-in-out duration-1000 top-[100%] hidden bg-black py-1">
-                    {item.subMenu.map((item1) => (
-                      <div className="text-white dropdown transition ease-in-out duration-1000 px-4 py-2 hover:bg-slate-300">
-                        {item1.title}
-                        {item1.dropdown && (
-                          <div className="bg-black w-[15rem] dropdown-content hidden absolute left-[100%] top-0 py-1">
-                            {item1.subMenu.map((item2) => (
-                              <div className="text-white dropdown px-4 py-2 hover:bg-slate-300">
-                                {item2.title}
-                                {item2.dropdown && (
-                                  <div className="bg-black dropdown-content hidden absolute left-[100%] top-0 py-1">
-                                    {item2.subMenu.map((item3) => (
-                                      <div className="text-white px-4 py-2 hover:bg-slate-300">
-                                        {item3.title}
-                                      </div>
-                                    ))}
-                                  </div>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile Navbar */}
-        <div className="flex lg:hidden">
-          {mobileNav ? (
-            <MdOutlineClose
-              color="white"
-              size={"1.5em"}
-              onClick={() => setMobileNav(false)}
-            />
-          ) : (
-            <GiHamburgerMenu
-              color="#fff"
-              size={"1.5em"}
-              onClick={() => setMobileNav(true)}
-            />
-          )}
-        </div>
       </div>
-      <Sidebar menu={menu} mobileNav={mobileNav} />
+      <div
+        className="bg-gray-600 flex flex-col lg:flex-row "
+        data-aos="fade-down"
+      >
+        <div className="mx-[5%] md:mx-[7%] lg:mx-[10%] xl:mx-[15%] 2xl:[20%] lg:w-full flex justify-between items-center">
+          {/* <img
+          src="https://tevily-nextjs.vercel.app/_next/static/media/logo-1.279e19a3.png"
+          alt=""
+          className="md:mr-[5%] my-3 lg:my-0"
+        /> */}
+          {/* Desktop Navbar */}
+
+          <div className="hidden w-full lg:flex lg:justify-between">
+            {menu.map((item) => (
+              <div className=" relative h-[10vh]  group max-w-[15rem]">
+                <div className="dropdown flex flex-col justify-center h-full relative mx-3  text-sm text-dm font-bold text-white cursor-pointer">
+                  <p className="m-0">{item.title}</p>
+                  <div className="absolute top-[95%] h-[3px] w-full rounded-xl bg-[#fd7e14] scale-x-0 origin-left group-hover:scale-x-100 transition-transform ease-in-out duration-1000"></div>
+                  {item.dropdown && (
+                    <div className="dropdown-content absolute w-[14rem] transition ease-in-out duration-1000 top-[100%] hidden bg-black py-1">
+                      {item.subMenu.map((item1) => (
+                        <div className="text-white dropdown transition ease-in-out duration-1000 px-4 py-2 hover:bg-slate-300">
+                          <p onClick={() => navigate(item1.link)}>
+                            {item1.title}
+                          </p>
+                          {item1.dropdown && (
+                            <div className="bg-black w-[15rem] dropdown-content hidden absolute left-[100%] top-0 py-1">
+                              {item1.subMenu.map((item2) => (
+                                <div className="text-white dropdown px-4 py-2 hover:bg-slate-300">
+                                  {item2.title}
+                                  {item2.dropdown && (
+                                    <div className="bg-black dropdown-content hidden absolute left-[100%] top-0 py-1">
+                                      {item2.subMenu.map((item3) => (
+                                        <div className="text-white px-4 py-2 hover:bg-slate-300">
+                                          {item3.title}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Navbar */}
+          <div className="flex lg:hidden">
+            {mobileNav ? (
+              <MdOutlineClose
+                color="white"
+                size={"1.5em"}
+                onClick={() => setMobileNav(false)}
+              />
+            ) : (
+              <GiHamburgerMenu
+                color="#fff"
+                size={"1.5em"}
+                onClick={() => setMobileNav(true)}
+              />
+            )}
+          </div>
+        </div>
+        <Sidebar menu={menu} mobileNav={mobileNav} />
+      </div>
     </div>
   );
 };
