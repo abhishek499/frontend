@@ -210,7 +210,7 @@ const Tour = ({ data }) => {
                     placeholder="message"
                   />
                 </div>
-                <button className="w-2/4 h-[5vh] mt-4 flex justify-center items-center font-montserrat font-bold text-white bg-[#f97150]">
+                <button className="w-2/4 h-[5vh] mt-4 flex justify-center text-[80%] items-center font-montserrat font-bold text-white bg-[#f97150]">
                   SUBMIT NOW
                 </button>
               </form>
