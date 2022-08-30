@@ -736,7 +736,7 @@ const Navbar2 = () => {
                     <div className="dropdown-content absolute w-[14rem] transition ease-in-out duration-1000 top-[100%] hidden bg-black py-1">
                       {item.subMenu.map((item1) => (
                         <div className="text-white dropdown transition ease-in-out duration-1000 px-4 py-2 hover:bg-slate-300">
-                          <p onClick={() => navigate(item1.link)}>
+                          <p className="m-0" onClick={() => navigate(item1.link)}>
                             {item1.title}
                           </p>
                           {item1.dropdown && (

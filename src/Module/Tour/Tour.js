@@ -1,21 +1,41 @@
 import React from "react";
-import { CgNotes } from "react-icons/cg";
+import { CgNotes, CgEditBlackPoint } from "react-icons/cg";
 import { AiFillCar, AiFillStar } from "react-icons/ai";
 import { FiMap } from "react-icons/fi";
 import { BiDollar } from "react-icons/bi";
-import { BsHeadphones } from "react-icons/bs";
+import { BsHeadphones, BsFillPersonFill } from "react-icons/bs";
 import { ImLifebuoy } from "react-icons/im";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { FiMail } from "react-icons/fi";
+import { FiMail, FiClock } from "react-icons/fi";
 import TopBanner from "./Components/TopBanner";
 import Tab from "./Components/Tab";
+import { MdFlightTakeoff, MdOutlineFlightLand } from "react-icons/md";
 
 const Tour = ({ data }) => {
   return (
     <div>
       <TopBanner data={data} />
-      <div className="h-[8vh] bg-[#FCFCFC] py-5">
-        <div className="w-2/3 h-full bg-red-600"></div>
+      <div className=" bg-[#FCFCFC] py-4">
+        <div>
+          <div className="w-2/3  grid grid-cols-2 gap-x-10 px-[5vw] md:px-[15vw]">
+            <div className="flex ">
+              <FiClock color="#f97150" size={"1.2rem"} />
+              <p className="ml-3">02 Night / 03 Days</p>
+            </div>
+            <div className="flex">
+              <MdFlightTakeoff color="#f97150" size={"1.2rem"} />
+              <p className="ml-3 mb-0">Varanasi</p>
+            </div>
+            <div className="flex">
+              <MdOutlineFlightLand color="#f97150" size={"1.2rem"} />
+              <p className="ml-3">Varanasi</p>
+            </div>
+            <div className="flex">
+              <BsFillPersonFill color="#f97150" size={"1.2rem"} />
+              <p className="ml-3">Min Age : 10+</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         <div className="flex flex-col md:space-x-10 md:flex-row px-[5vw] md:px-[15vw]">
@@ -26,18 +46,53 @@ const Tour = ({ data }) => {
             <div className="flex items-center md:mt-5">
               <CgNotes size={"1.5rem"} color="#4692e7" />
               <h6 className="font-belleza text-3xl text-[#383838] ml-2 mt-1">
-                Tour Summary
+                Tour Details
               </h6>
             </div>
             {/* Details */}
             <div className="flex mt-3">
-              <ul className="list-disc ml-2">
-                {data.tourSummary.map((li) => (
-                  <li className="font-montserrat text-sm text-[#8c8c8c]">
+              <ul className="ml-2">
+                {data.tourDetail.map((li) => (
+                  <li className="font-montserrat mt-3 text-sm text-[#8c8c8c]">
                     {li}
                   </li>
                 ))}
               </ul>
+            </div>
+            {/* Price Includes */}
+            <div className="h-[1px] mt-10 w-full bg-[#8c8c8c] rounded-lg"></div>
+            <div className="flex justify-between">
+              <h6 className="font-belleza text-xl font-bold mt-4 text-[#f97150] ml-2">
+                Price Includes
+              </h6>
+              <div className="mt-4">
+                {data.priceIncludes.map((item) => (
+                  <div className="flex items-center mb-4">
+                    <CgEditBlackPoint color="#f97150" />
+                    <p className="mb-0 ml-2 font-montserrat text-base">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Price Excludes */}
+            <div className="h-[1px] mt-10 w-full bg-[#8c8c8c] rounded-lg"></div>
+            <div className="flex justify-between">
+              <h6 className="font-belleza w-1/3 text-xl font-bold mt-4 text-[#f97150] ml-2">
+                Price Excludes
+              </h6>
+              <div className="mt-4">
+                {data.priceExcludes.map((item) => (
+                  <div className="flex items-baseline mb-4 ">
+                    <CgEditBlackPoint color="#f97150" />
+                    <p className="mb-0 ml-2 font-montserrat text-base">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
             {/* Itinerary */}
             <div className="mt-[5vh] md:mt-[15vh] space-y-8">
@@ -62,40 +117,7 @@ const Tour = ({ data }) => {
               ))}
             </div>
             {/* Ruler */}
-            <div className="border-[#e1e1e1] mt-10 border-b-2"></div>
-            <div>
-              {/* Heading 3 Inclusion */}
-              <div className="flex items-center md:mt-[15vh]">
-                <FiMap size={"1.5rem"} color="#4692e7" />
-                <h6 className="font-belleza text-3xl text-[#383838] ml-2 mt-1">
-                  Inclusion
-                </h6>
-              </div>
-              <div>
-                {/* Subheading 1 */}
-                <div>
-                  <h6 className="font-montserrat font-bold ">Inclusion:</h6>
-                  <ul className="my-8 list-disc pb-5">
-                    {data.Inclusion.inclusion.map((item) => (
-                      <li className="font-montserrat text-sm text-[#8c8c8c]">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {/* Subheading2 */}
-                <div>
-                  <h6 className="font-montserrat font-bold ">Exclusion:</h6>
-                  <ul className="my-8 list-disc pb-5">
-                    {data.Inclusion.exclusion.map((item) => (
-                      <li className="font-montserrat text-sm text-[#8c8c8c]">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            
           </div>
           <div className="md:w-1/3">
             {/* Container 1 */}
@@ -227,7 +249,7 @@ const Tour = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="border-[#e1e1e1] border-b-2 md:mx-[15vw]"></div>
+        <div className="border-[#e1e1e1] border-b-2 md:mx-[15vw] mt-10"></div>
         {/* Suggestions */}
         <div className="flex flex-col justify-center items-center my-10 mx-[5vw] md:mx-[15vw]">
           <p className="font-belleza text-3xl text-[#f97150] font-bold">
